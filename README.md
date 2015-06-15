@@ -1,7 +1,7 @@
 # zenbrowser
 An experimental minimalist WebBrowser build with nodeWebkkit
 
-![Alt text](http://doulcet.fr/screen.png "The BBC Site Browsed with ZenBrowser")
+![Alt text](http://doulcet.fr/zen/screen.png "The BBC Site Browsed with ZenBrowser")
 
 Binary are available here :
  - win32 : http://doulcet.fr/zen/win32.zip
