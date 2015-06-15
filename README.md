@@ -15,7 +15,7 @@ This is Higly experimental, SLOW and BUGGY.
 
 # What is it? Why ZenBrowser?
 
-I create this browser as a small experiment to see what a minimalistic web could look like.
+I created this browser as a small experiment to see what a minimalistic web could look like.
 
 It has the following features :
 
@@ -26,6 +26,6 @@ It has the following features :
 
 # Why is the default page buggy?
 
-I choose to default the start page to hackerNews as it is a great source of fresh content. However, the browser do not successfully render this page correctly for now :(
+I chose to default the start page to hackerNews as it is a great source of fresh content. However, the browser do not successfully render this page correctly for now :(
 
 
