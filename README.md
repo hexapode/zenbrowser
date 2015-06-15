@@ -4,7 +4,7 @@ An experimental minimalist WebBrowser build with nodeWebkkit
 Binary are available here :
  - win32 : http://doulcet.fr/zen/win32.zip
  - win64 : http://doulcet.fr/zen/win64.zip
- - osx64 : http://doulcet.fr/zen/osx32.zip
+ - osx32 : http://doulcet.fr/zen/osx32.zip
  - osx64 : http://doulcet.fr/zen/osx64.zip
 
 # Warning
