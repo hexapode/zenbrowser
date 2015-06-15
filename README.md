@@ -11,7 +11,7 @@ Binary are available here :
 
 # Warning
 
-This is Highly experimental, SLOW and BUGGY.
+This is highly experimental, SLOW and BUGGY.
 
 # What is it? Why ZenBrowser?
 
