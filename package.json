@@ -1,0 +1,17 @@
+
+{
+  "name": "ZenBrowser",
+  "version": "0.0.1",
+  "main": "index.html",
+  "window": {
+    "title": "Zen Browser Alpha",
+    "toolbar": false,
+    "frame": true,
+    "width": 1000,
+    "height": 600,
+    "position": "mouse",
+    "min_width": 400,
+    "min_height": 200
+  }
+}
+

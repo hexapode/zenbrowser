@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Zen Browser</title>
+  <script src='./js/Navigator.js'></script>
+
+  <meta charset="utf-8" />
+
+<link href='http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800&subset=latin,greek-ext,latin-ext,cyrillic,cyrillic-ext,greek,vietnamese' rel='stylesheet' type='text/css'>
+
+  <style>
+  body {
+    width : 800px;
+    margin : auto;
+    font-family: 'Open Sans';
+    font-size: 22px;
+    font-weight: 100;
+    text-align: justify;
+    line-height: 135%;
+    letter-spacing : 0.159999996423721px
+  }
+ 
+  img {
+    display : block;
+    width : 100%;
+    border-radius : 2px;
+  }
+  h1 {
+    line-height: 120%;
+  }
+
+  p {
+    margin-top : -.3em;
+  }
+
+  a {
+    text-decoration: none;
+    color : #000;
+  }
+
+  pre {
+    padding : 5px;
+    border-radius : 2px;
+  }
+
+  pre p {
+    line-height: 60%;
+    font-size: 18px;
+  }
+
+  pre code {
+    font-family : monospace !important;
+    line-height: 120%;
+    font-size: 20px;
+  }
+
+  ol {
+    border-left: 1px solid #aaa;
+    padding-left: 10px;
+    list-style-position: inside;
+  }
+  ul {
+    border-left: 1px solid #aaa;
+    padding-left: 10px;
+    list-style-position: inside;
+  }
+
+  table{
+    border-collapse: collapse;
+    border-spacing: 0;
+    width:100%;
+    height:100%;
+    margin:0px;
+    padding:0px;
+  }
+
+
+  tr:nth-child(odd){ background-color:##; }
+  tr:nth-child(even){background-color:#ffffff; }
+  td{
+    vertical-align:middle;
+    border:1px solid #cccccc;
+    border-width:0px 1px 1px 0px;
+    text-align:left;
+    padding:13px;
+  }
+  th {
+    padding:13px;
+    border:1px solid #cccccc;
+    border-width:0px 1px 1px 0px;
+    text-align:left;
+  }
+
+  tr:last-child td{
+    border-width:0px 1px 0px 0px;
+  }
+  tr td:last-child{
+    border-width:0px 0px 1px 0px;
+  }
+  tr:last-child td:last-child{
+    border-width:0px 0px 0px 0px;
+  }
+
+  tr:first-child td{
+    background-color:#EEEEEE;
+    border:0px solid #cccccc;
+    text-align:center;
+    border-width:0px 0px 1px 1px;
+  }
+
+  tr:first-child td:first-child{
+    border-width:0px 0px 1px 0px;
+  }
+
+  tr:first-child td:last-child{
+    border-width:0px 0px 1px 1px;
+  }
+
+  .link {
+    font-weight: bold;
+    color : #444;
+    cursor : pointer;
+  }
+
+  #menu {
+    width : 100%;
+    position : fixed;
+    top : 0px;
+    left :0px;
+    background-color  : #eee;
+    height : 50px;
+  }
+  #menu input {
+    margin : 5px;
+    height : 40px;
+    background-color : #fff;
+    font-size: 28px;
+    border : 1px solid #ddd;
+  }
+
+  #container {
+    width : 100%;
+    margin-top : 70px;
+  }
+
+  </style>
+  <link rel="stylesheet" href="http://cdnjs.cloudflare.com/ajax/libs/highlight.js/8.6/styles/default.min.css">
+  <script src="http://cdnjs.cloudflare.com/ajax/libs/highlight.js/8.6/highlight.min.js"></script>
+  <script>hljs.initHighlightingOnLoad();</script>
+</head>
+<body>
+  
+<script>Navigate('http://news.ycombinator.com');</script>
+
+<div id='menu'>
+  <form onsubmit="Navigate(document.getElementById('url').value)">
+    <input type='button' value='<' onclick='NavigateBack()' />
+
+    <input style='width : 600px' type='text' value='http://news.ycombinator.com/' id='url' /> <input type='submit' value='Go'>
+  </form>
+</div>
+<div id='container'>
+  
+
+</div>
+</body>
+
+</html>
