@@ -1,7 +1,11 @@
 # zenbrowser
 An experimental minimalist WebBrowser build with nodeWebkkit
 
-Binary are available at http://pld.io/zen
+Binary are available here :
+ - win32 : http://pld.io/zen/win32.zip
+ - win64 : http://pld.io/zen/win64.zip
+ - osx64 : http://pld.io/zen/osx32.zip
+ - osx64 : http://pld.io/zen/osx64.zip
 
 # Warning
 
