@@ -11,7 +11,7 @@ Binary are available here :
 
 # Warning
 
-This is Higly experimental, SLOW and BUGGY.
+This is Highly experimental, SLOW and BUGGY.
 
 # What is it? Why ZenBrowser?
 
@@ -26,6 +26,6 @@ It has the following features :
 
 # Why is the default page buggy?
 
-I chose to default the start page to hackerNews as it is a great source of fresh content. However, the browser do not successfully render this page correctly for now :(
+I chose to default the start page to hackerNews as it is a great source of fresh content. However, the browser does not successfully render this page correctly for now :(
 
 
