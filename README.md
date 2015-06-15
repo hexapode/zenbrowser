@@ -20,7 +20,7 @@ I created this browser as a small experiment to see what a minimalistic web coul
 It has the following features :
 
 - No Javascript support
-- No AD
+- No Ads
 - No Style
 - Trying To show the important content only.
 
