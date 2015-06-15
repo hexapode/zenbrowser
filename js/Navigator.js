@@ -5,41 +5,51 @@ var fs = require('fs');
 
 var isNavInProgress = false;
 var HISTORY = ['http://news.ycombinator.com/'];
-function NavigateTo(url) {
 
-  if (isNavInProgress) {
+function NavigateTo(url) {
+ console.log('=======GOTOURL ', url);
+  if (document.title == 'loading') {
     return false;
   }
-
-  ga('send', 'pageview', {
-    'page' : 'ZenBrowser',
-    'title': url
-    });
- 
   isNavInProgress = true;
+  
+  document.getElementById('url').value = url;
+  
+  document.title = 'loading';
   request(url, function(error, response, body) {
     isNavInProgress = false;
     var extracted = dataExtractor(body, url)
-    console.log("\n\n======= RESULT ======\n\n");
-    console.log(extracted);
 
     var buildOutput = articleGenerator(extracted, url);
+    document.title = extracted.title;
     document.getElementById('container').innerHTML = buildOutput;
   }); 
 }
 
-function Navigate(url) {
+function Navigate(address) {
+
+  if (address == 'url') {
+    address = document.getElementById('url').value;
+    console.log('assert', address);
+  }
+  console.log(isNavInProgress);
   if (isNavInProgress) {
     return false;
   }
-  HISTORY.push(url);
-  NavigateTo(url);
+  if (address.indexOf('://') === -1) {
+    address = 'http://' + address;
+  }
+  HISTORY.push(address);
+  NavigateTo(address);
+  return false;
 }
+
 
 function NavigateBack() {
   if (isNavInProgress) {
     return false;
   }
+  console.log('=======GOTOBACK ', url);
   if (HISTORY.length) {
     var url = HISTORY[HISTORY.length - 1];
     HISTORY.splice(HISTORY.length - 1, 1);
@@ -50,11 +60,6 @@ function NavigateBack() {
   }
 }
 
-function NavigateNext() {
-  if (isNavInProgress) {
-    return false;
-  }
-}
 
 
 

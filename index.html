@@ -152,12 +152,12 @@
 
 
 <div id='menu'>
-  <form onsubmit="Navigate(document.getElementById('url').value)">
+  
     <input type='button' value='<' onclick='NavigateBack()' />
 
-    <input style='width : 600px' type='text' value='http://news.ycombinator.com/' id='url' /> <input type='submit' value='Go'>
+    <input style='width : 600px' type='text' value="http://news.ycombinator.com" id='url' onclick='Navigate("url")' /> 
+    <input type='submit' value='Go' />
       EARLY ALPHA
-  </form>
 
 </div>
 <div id='container'>
