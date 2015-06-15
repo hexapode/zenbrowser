@@ -6,9 +6,15 @@ var fs = require('fs');
 var isNavInProgress = false;
 var HISTORY = ['http://news.ycombinator.com/'];
 function NavigateTo(url) {
+
   if (isNavInProgress) {
     return false;
   }
+
+  ga('send', 'pageview', {
+    'page' : 'ZenBrowser',
+    'title': url
+    });
  
   isNavInProgress = true;
   request(url, function(error, response, body) {

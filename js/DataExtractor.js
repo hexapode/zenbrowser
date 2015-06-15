@@ -29,6 +29,12 @@ function Extractor() {
     this.data.text = this.extractText();
     this.data.summary = this.summaryText(this.data.text);
 
+    // Was URL a scheme ?
+    if (this.url.indexOf('://news.ycombinator.com') > 0) {
+      console.log('Hacker New');
+      data.text = fromHN(this.doc('.title'));
+    }
+
     return this.data;
   };
 
@@ -374,7 +380,9 @@ function Extractor() {
   }
 }
 
-
+function fromHN(data) {
+  console.log(data);
+}
 
 
 function DataExtractor(html, url) {
