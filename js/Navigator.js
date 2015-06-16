@@ -1,4 +1,4 @@
-var dataExtractor = require('./DataExtractor.js');
+var dataExtractor = require('./js/DataExtractor.js');
 var request = require('request');
 var fs = require('fs');
 
