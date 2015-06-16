@@ -7,7 +7,7 @@ var isNavInProgress = false;
 var HISTORY = ['http://news.ycombinator.com/'];
 
 function NavigateTo(url) {
- console.log('=======GOTOURL ', url);
+
   if (document.title == 'loading') {
     return false;
   }
@@ -60,12 +60,7 @@ function NavigateBack() {
   }
 }
 
-
-
-
-
-
-
+// Generate page HTML from Dom :)
 function articleGenerator(dom, url) {
 
   //result = result.replace(/_image_/g, dom.image);

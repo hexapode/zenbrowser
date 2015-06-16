@@ -52,13 +52,13 @@ function Extractor() {
     else if (indexOf('//') === 0) {
        url = url.substring(2);
     }
-
+    console.log('Stripped URL', url);
     // remove endDoman
     var slashIndex = url.indexOf('/');
-    if (slashIndex) {
+    if (slashIndex != -1) {
       url = url.substring(0,slashIndex);
     }
-
+    console.log('Final URL', url);
     this.domain = url;
 
   };
@@ -234,7 +234,13 @@ function Extractor() {
       }
       else if (node.type == 'tag' && node.name == 'a') { 
         if (node.attribs['href']) {
-          text += '<a class="link" onclick="Navigate(\'' + node.attribs['href'] + '\')">' + childText + '</a>';
+          var href = node.attribs['href'];
+          console.log('HREF', href);
+          if (href.indexOf('://') === -1 && href.indexOf('//') === -1) {
+            href = this.domain + '/' + href;
+            console.log('HREFCORRECTED', href);
+          }
+          text += '<a class="link" onclick="Navigate(\'' + href + '\')">' + childText + '</a>';
         }
         else if (node.attribs['name']) {
           text += '<a name="' + node.attribs['name'] + '">' + childText + '</a>';
